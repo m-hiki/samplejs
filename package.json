@@ -14,11 +14,11 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "vue": "^2.4.2",
-    "vue-router": "^2.7.0",
+    "moment": "^2.18.1",
     "createjs-easeljs": "^0.8.2",
     "createjs-tweenjs": "^0.6.0",
-    "moment": "^2.18.1"
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -43,11 +43,13 @@
     "eslint-plugin-standard": "^2.0.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.1",
+    "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.11.1",
     "friendly-errors-webpack-plugin": "^1.1.3",
     "html-webpack-plugin": "^2.28.0",
     "http-proxy-middleware": "^0.17.3",
+    "imports-loader": "^0.6.5",
     "webpack-bundle-analyzer": "^2.2.1",
     "cross-env": "^5.0.1",
     "karma": "^1.4.1",
@@ -75,6 +77,7 @@
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
+    "preload-js": "^0.6.3",
     "rimraf": "^2.6.0",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.0.4",

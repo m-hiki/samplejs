@@ -2,6 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var webpack = require('webpack')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -23,6 +24,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'createjs' : path.join(__dirname, 'node_modules/createjs-easeljs/lib/easeljs-0.8.2.combined.js'),
     }
   },
   module: {
@@ -71,5 +73,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+        'createjs': 'imports?this=>global!exports?createjs!createjs'
+    })
+  ]
 }
