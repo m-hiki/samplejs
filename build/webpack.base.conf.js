@@ -23,9 +23,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'createjs' : path.join(__dirname, 'node_modules/createjs-easeljs/lib/easeljs-0.8.2.combined.js'),
-    }
+      '@': resolve('src')
+    },
+    modules: ['node_modules', 'src/assets/vendors/', 'src/', 'src/assets/js/']
   },
   module: {
     rules: [
@@ -71,12 +71,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
     ]
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-        'createjs': 'imports?this=>global!exports?createjs!createjs'
-    })
-  ]
+  externals: {
+    createjs: 'createjs'
+  }
 }
