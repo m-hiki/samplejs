@@ -1,4 +1,5 @@
 # samplejs
+[![Build Status](https://secure.travis-ci.org/m-hiki/samplejs.png?branch=master)](http://travis-ci.org/m-hiki/samplejs)
 
 > A Vue.js project
 
